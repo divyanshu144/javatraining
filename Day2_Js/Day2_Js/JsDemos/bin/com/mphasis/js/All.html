@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function show2(){
+	var fname = data.fname.value;
+	var lname = data.lname.value;
+	var result = fname + " " + lname;
+	document.getElementById('result').innerHTML= result;
+}
+function show() {
+	var result="";
+	if (data.divy.checked==true) {
+		result+="Divyanshu is Present Today...<br/>";
+	} else {
+		result+="Divyanshu is Absent Today...<br/>";
+	}
+
+	if (data.anmol.checked==true) {
+		result+="Anmol is Present Today...<br/>";
+	} else {
+		result+="Anmol is Absent Today...<br/>";
+	}
+
+	if (data.sunil.checked==true) {
+		result+="Sunil is Present Today...<br/>";
+	} else {
+		result+="Sunil is Absent Today...<br/>";
+	}
+	document.getElementById("result1").innerHTML=result;
+}
+
+function show1(){
+	var student = data.student.value;
+	document.getElementById('result2').innerHTML = student;
+}
+</script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="data">
+	<table border="3" align="center">
+		<tr>
+			<th colspan="2">Details....</th>
+		</tr>
+		<tr>
+			<th>First name: </th>
+			<td>
+				<input type="text" name="fname"  />
+			</td>
+		</tr>
+		<tr>
+			<th>Last name: </th>
+			<td>
+				<input type="text" name="lname"  />
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="button" value="Show" onclick="show2()" />
+				<br/><br/>
+				<span id="result"></span>
+			</td>
+		</tr>
+		
+		<tr> 
+			<th>Mark Attendence </th>
+			<td>
+				<input type="checkbox" name="divy" onchange="show()" /> Divyanshu <br/> <br/>
+				<input type="checkbox" name="anmol" onchange="show()" /> Anmol <br/> <br/>
+				<input type="checkbox" name="sunil" onchange="show()" /> sunil <br/> <br/>
+				<span id="result1"></span>
+			</td>
+		</tr>
+		<tr>
+			<th> Select Name </th>
+			<td>
+				<select name="student" onchange="show1()">
+				<option value="somebody">Somebody</option>
+				<option value="nobody">Nobody</option>
+				<option value="anybody">Anybody</option>
+				<option value="everybody">Everybody</option>
+			</select>
+			 </td> 
+		</tr>
+		<tr>
+			<td colspan="2">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				
+				<br/><br/>
+				<span id="result2"></span>
+			</td>
+		</tr>
+	</table>
+	</form>
+
+</body>
+</html>
